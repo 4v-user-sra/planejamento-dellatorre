@@ -1,0 +1,8 @@
+{
+  "name": "Dellatorre - Planejamento Estratégico",
+  "description": "Planejamento Estratégico de Marketing e Geração de Demanda para Dellatorre Máquinas Pesadas - V4 Company",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
