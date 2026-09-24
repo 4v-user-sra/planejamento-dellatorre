@@ -3,6 +3,7 @@
 @theme {
   --font-sans: "Google Sans", system-ui, sans-serif;
   --font-serif: "Libre Baskerville", serif;
+  --font-extended: "Microgramma D Extended", "Microgramma", "Michroma", "Eurostile Extended", "Eurostile", sans-serif;
 }
 
 body {

@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { presentationData } from "../data"
-import { ArrowUpRight, ArrowRight, Target, Lightbulb, PlayCircle, Star, Calendar, CheckCircle2, ChevronRight, FileSpreadsheet, Network, FileText, Video, Rocket, ExternalLink, AlertTriangle, ShoppingCart, Ban, RefreshCw, BarChart2, TrendingUp, DollarSign, Truck, ShieldCheck, Wrench, PhoneCall } from "lucide-react"
+import { ArrowUpRight, ArrowRight, Target, Lightbulb, PlayCircle, Star, Calendar, CheckCircle2, ChevronRight, FileSpreadsheet, Network, FileText, Video, Rocket, ExternalLink, AlertTriangle, ShoppingCart, Ban, RefreshCw, BarChart2, TrendingUp, DollarSign, Truck, ShieldCheck, Wrench, PhoneCall, Instagram, MessageSquare } from "lucide-react"
 
 const themeMap: Record<string, string> = {
   "01_capa": "bg-zinc-950 text-zinc-300 border-zinc-900",
@@ -229,8 +229,8 @@ function RenderBlock({ slide }: { slide: any }) {
           <div className="space-y-12">
             <div>
               <h4 className={`text-sm font-bold ${isLight ? 'text-zinc-500' : 'text-zinc-400'} uppercase tracking-widest mb-4`}>Tipografia Principal</h4>
-              <p className={`text-5xl font-sans font-black ${titleColor} mb-2`}>{d.tipografia_principal}</p>
-              <p className={`text-2xl font-sans ${subtitleColor}`}>Google Sans Black / Impact</p>
+              <p className={`text-4xl md:text-5xl font-black uppercase tracking-wider ${titleColor} mb-2`} style={{ fontFamily: 'var(--font-extended)' }}>{d.tipografia_principal}</p>
+              <p className={`text-xl font-sans ${subtitleColor}`}>Microgramma D Extended / Bold & Black Extended</p>
             </div>
             <div>
               <h4 className={`text-sm font-bold ${isLight ? 'text-zinc-500' : 'text-zinc-400'} uppercase tracking-widest mb-4`}>Tipografia Secundária</h4>
@@ -345,21 +345,13 @@ function RenderBlock({ slide }: { slide: any }) {
 
   if (type === 'smart_goal_okr') {
     return (
-      <div className={`p-10 md:p-14 rounded-3xl border border-red-900/50 bg-gradient-to-br from-zinc-950 via-zinc-900 to-red-950/20 shadow-2xl`}>
-        <div className="text-center max-w-4xl mx-auto mb-14">
+      <div className={`p-10 md:p-16 rounded-3xl border border-red-900/50 bg-gradient-to-br from-zinc-950 via-zinc-900 to-red-950/20 shadow-2xl`}>
+        <div className="text-center max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">{d.titulo}</h2>
-          <p className="text-lg md:text-xl text-zinc-300 leading-relaxed font-sans bg-black/40 p-6 rounded-2xl border border-zinc-800">{d.objetivo_geral}</p>
-        </div>
-        <div className="grid md:grid-cols-3 gap-6">
-          {[1,2,3].map((num) => (
-            <div key={num} className="bg-black/60 border border-red-900/40 p-6 rounded-2xl flex flex-col gap-4 backdrop-blur-sm">
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-full bg-red-950 border border-red-700 flex items-center justify-center text-red-400 font-bold font-mono">KR{num}</div>
-                <span className="text-xs uppercase tracking-wider text-zinc-400 font-semibold">Resultado-Chave</span>
-              </div>
-              <p className="text-base text-zinc-200 leading-relaxed">{d[`kr${num}_texto`]}</p>
-            </div>
-          ))}
+          <div className="text-lg md:text-2xl text-zinc-200 leading-relaxed font-sans bg-black/60 p-8 md:p-12 rounded-3xl border border-red-900/40 shadow-inner">
+            <span className="text-xs uppercase tracking-widest text-red-500 font-bold block mb-4">🎯 Direcionamento & Meta Geral</span>
+            {d.objetivo_geral}
+          </div>
         </div>
       </div>
     )
@@ -414,9 +406,18 @@ function RenderBlock({ slide }: { slide: any }) {
               <Video className="w-6 h-6 text-red-500" />
            </div>
            <h3 className={`text-2xl font-bold ${titleColor}`}>Captação Prática e Humanizada no Pátio de Palmas</h3>
-           <p className={`${subtitleColor} max-w-2xl text-base`}>
-             Jean e Rodrigo gravam vídeos diretos pelo celular com base nos roteiros enviados pelo Squad V4: apresentação de bombas hidráulicas, testes de giro, banco de horas e detalhes das máquinas prontas para entrega.
-           </p>
+           {d.link_exemplo && (
+             <a
+               href={d.link_exemplo}
+               target="_blank"
+               rel="noopener noreferrer"
+               className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-base shadow-lg shadow-red-950/40 hover:shadow-red-600/30 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 mt-2"
+             >
+               <FileText className="w-5 h-5" />
+               <span>Acessar Roteiros & Diretrizes de Gravação no Google Docs</span>
+               <ExternalLink className="w-4 h-4 opacity-80" />
+             </a>
+           )}
         </div>
       </div>
     )
@@ -506,16 +507,17 @@ function RenderBlock({ slide }: { slide: any }) {
         <div className="w-full flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
           <div>
             <h2 className={`text-4xl font-bold ${titleColor}`}>{d.titulo}</h2>
+            {d.subtitulo && <p className={`text-lg ${subtitleColor} mt-2`}>{d.subtitulo}</p>}
           </div>
         </div>
         
-        <div className="min-w-[920px] w-full flex flex-col items-center relative">
+        <div className="min-w-[960px] w-full flex flex-col items-center relative">
           {/* Top Node */}
           <div className="bg-gradient-to-r from-zinc-900 via-zinc-800 to-zinc-900 border-2 border-zinc-700 text-white font-extrabold px-10 py-4 rounded-2xl flex items-center gap-3 shadow-2xl z-10">
             <DollarSign className="w-6 h-6 text-amber-400" />
             <div className="flex flex-col text-left">
               <span className="text-xs uppercase tracking-widest text-zinc-400 font-semibold">Orçamento Total de Mídia</span>
-              <span className="text-2xl text-amber-400 font-black">{d.orcamento_total || "R$ 2.000 a R$ 2.500 / mês"}</span>
+              <span className="text-2xl text-amber-400 font-black">{d.orcamento_total || "R$ 2.500 / mês"}</span>
             </div>
           </div>
 
@@ -541,108 +543,175 @@ function RenderBlock({ slide }: { slide: any }) {
           {/* 3 Campaign Branch Nodes */}
           <div className="flex w-full justify-between gap-6 px-4 mt-2 z-10">
             
-            {/* Branch 1: Google Ads (70%) */}
-            <div className={`flex-[1.2] ${cardBg} p-6 rounded-2xl text-left shadow-xl border-2 border-amber-500/60 relative flex flex-col justify-between overflow-hidden`}>
+            {/* Branch 1: Google Ads (60%) */}
+            <div className={`flex-1 ${cardBg} p-6 rounded-2xl text-left shadow-xl border-2 border-amber-500/60 relative flex flex-col justify-between overflow-hidden`}>
               <div className="absolute top-0 right-0 bg-amber-500 text-zinc-950 font-black text-xs px-3 py-1 rounded-bl-xl uppercase tracking-wider">
-                70% da Verba
+                60% da Verba
               </div>
               <div>
                 <div className="flex items-center gap-2 mb-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse" />
-                  <span className="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider">Motor Primário</span>
+                  <span className="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider">Motor Primário de Intenção</span>
                 </div>
                 <h4 className={`font-black text-xl mb-1 ${titleColor}`}>Google Ads (Search)</h4>
-                <p className="text-2xl font-black text-amber-500 mb-3">R$ 1.400 a R$ 1.750 <span className="text-xs font-semibold text-zinc-500">/mês</span></p>
+                <p className="text-2xl font-black text-amber-500 mb-3">R$ 1.500 <span className="text-xs font-semibold text-zinc-500">/mês</span></p>
                 <div className={`text-xs ${isLight ? 'text-zinc-600' : 'text-zinc-300'} space-y-1.5`}>
-                  <p className="text-amber-700 dark:text-amber-400 font-medium">⚡ Geolocalizado: TO, Matopiba, MT, PA e GO</p>
+                  <p className="text-amber-700 dark:text-amber-400 font-medium">⚡ Busca de alta intenção comercial em TO, GO, DF, MT, MS, MA e PA</p>
                 </div>
               </div>
             </div>
 
-            {/* Branch 2: Meta Ads (20%) */}
-            <div className={`flex-[1] ${cardBg} p-6 rounded-2xl text-left shadow-xl border-2 border-red-500/60 relative flex flex-col justify-between overflow-hidden`}>
+            {/* Branch 2: Meta Ads (40%) */}
+            <div className={`flex-1 ${cardBg} p-6 rounded-2xl text-left shadow-xl border-2 border-red-500/60 relative flex flex-col justify-between overflow-hidden`}>
               <div className="absolute top-0 right-0 bg-red-600 text-white font-black text-xs px-3 py-1 rounded-bl-xl uppercase tracking-wider">
-                20% da Verba
+                40% da Verba
               </div>
               <div>
                 <div className="flex items-center gap-2 mb-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-red-500" />
-                  <span className="text-xs font-bold text-red-600 dark:text-red-400 uppercase tracking-wider">Autoridade & Estoque</span>
+                  <span className="text-xs font-bold text-red-600 dark:text-red-400 uppercase tracking-wider">Quebra de Desconfiança</span>
                 </div>
-                <h4 className={`font-black text-xl mb-1 ${titleColor}`}>Meta Ads (Vídeos & Feed)</h4>
-                <p className="text-2xl font-black text-red-500 mb-3">R$ 400 a R$ 500 <span className="text-xs font-semibold text-zinc-500">/mês</span></p>
+                <h4 className={`font-black text-xl mb-1 ${titleColor}`}>Meta Ads (Reconhecimento & Autoridade)</h4>
+                <p className="text-2xl font-black text-red-500 mb-3">R$ 1.000 <span className="text-xs font-semibold text-zinc-500">/mês</span></p>
                 <div className={`text-xs ${isLight ? 'text-zinc-600' : 'text-zinc-300'} space-y-1.5`}>
-                  <p className="text-red-700 dark:text-red-400 font-medium">🎯 Vídeos no pátio e prova social de entregas</p>
+                  <p className="text-red-700 dark:text-red-400 font-medium">🎯 Vídeos no pátio de Palmas, estoque real e prova social dos fundadores</p>
                 </div>
               </div>
             </div>
 
-            {/* Branch 3: Remarketing & Consignados (10%) */}
-            <div className={`flex-[0.9] ${cardBg} p-6 rounded-2xl text-left shadow-xl border-2 border-indigo-500/60 relative flex flex-col justify-between overflow-hidden`}>
-              <div className="absolute top-0 right-0 bg-indigo-500 text-white font-black text-xs px-3 py-1 rounded-bl-xl uppercase tracking-wider">
-                10% da Verba
+            {/* Branch 3: Remarketing & Conversão (Expansão Futura - Finaliza aqui) */}
+            <div className={`flex-1 ${cardBg} p-6 rounded-2xl text-left shadow-xl border-2 border-dashed border-indigo-500/60 relative flex flex-col justify-between overflow-hidden opacity-90`}>
+              <div className="absolute top-0 right-0 bg-indigo-600 text-white font-black text-xs px-3 py-1 rounded-bl-xl uppercase tracking-wider">
+                Fase 2 (30 Dias)
               </div>
               <div>
                 <div className="flex items-center gap-2 mb-2 text-indigo-500">
                   <span className="w-2.5 h-2.5 rounded-full bg-indigo-500" />
-                  <span className="text-xs font-bold uppercase tracking-wider">Reengajamento</span>
+                  <span className="text-xs font-bold uppercase tracking-wider">Expansão Futura</span>
                 </div>
-                <h4 className={`font-black text-xl mb-1 ${titleColor}`}>Remarketing & Consignação</h4>
-                <p className="text-2xl font-black text-indigo-500 mb-3">R$ 200 a R$ 250</p>
+                <h4 className={`font-black text-xl mb-1 ${titleColor}`}>Remarketing & WhatsApp</h4>
+                <p className="text-2xl font-black text-indigo-500 mb-3">Ativação em 30d <span className="text-xs font-semibold text-zinc-500">/após validação</span></p>
                 <div className={`text-xs ${isLight ? 'text-zinc-600' : 'text-zinc-400'} space-y-1`}>
-                  <p className="text-indigo-600 dark:text-indigo-400 font-medium">🔄 Captação de máquinas consignadas para expandir inventário.</p>
+                  <p className="text-indigo-600 dark:text-indigo-400 font-medium">🔄 Reimpacto de visitantes pós-análise de qualificação e intenção</p>
                 </div>
+              </div>
+              <div className="mt-4 pt-3 border-t border-zinc-800/60 flex items-center justify-center">
+                <span className="text-[11px] font-semibold text-indigo-400 uppercase tracking-wide">
+                  ✦ Finaliza em si mesmo (Etapa Futura)
+                </span>
               </div>
             </div>
 
           </div>
 
-          {/* Convergence Paths (Lines to Landing Pages & WhatsApp) */}
-          <div className="flex w-full justify-between px-4 mt-0">
-            <div className="flex-1 flex flex-col items-center relative pt-6">
-              <div className="flex w-[75%] justify-between absolute top-0">
-                <div className={`h-8 w-px bg-amber-500`} />
-                <div className={`h-8 w-px bg-red-500`} />
-                <div className={`h-8 w-px bg-indigo-500`} />
-              </div>
-              <div className={`w-[75%] h-0.5 bg-gradient-to-r from-amber-500 via-red-500 to-indigo-500 mt-8`} />
-              <div className={`h-8 w-px bg-red-600 relative`}>
-                <ChevronRight className="absolute -bottom-2 -left-2.5 w-5 h-5 text-red-600 rotate-90" />
-              </div>
-              
-              {/* Landing Page Central Node */}
-              <div className="bg-gradient-to-r from-zinc-900 to-zinc-950 text-white font-bold p-6 rounded-2xl shadow-2xl border-2 border-amber-500 flex items-center justify-between gap-6 mt-2 z-10 w-full max-w-2xl">
-                <div className="flex items-center gap-4">
-                  <div className="p-3.5 bg-amber-500/20 rounded-xl border border-amber-500/40">
-                    <Truck className="w-8 h-8 text-amber-500" />
-                  </div>
-                  <div>
-                    <span className="text-2xl font-black block">Landing Page por Categoria + WhatsApp</span>
-                    <span className="text-sm font-normal text-zinc-300">Páginas enxutas para Pás, Retros, Tratores e Caminhões com fotos reais e botão direto de WhatsApp</span>
-                  </div>
-                </div>
-                <div className="bg-amber-500/10 border border-amber-500/30 px-4 py-2 rounded-xl text-right shrink-0">
-                  <span className="text-xs uppercase block text-amber-400 font-bold">Contato Rápido</span>
-                  <span className="text-base font-black text-white">Rodrigo / Jean</span>
-                </div>
+          {/* Downward connecting arrows for Branch 1 and Branch 2 ONLY */}
+          <div className="flex w-full justify-between gap-6 px-4 mt-2">
+            {/* Connector under Branch 1 (Google) */}
+            <div className="flex-1 flex justify-center">
+              <div className="h-10 w-px bg-amber-500 relative">
+                <ChevronRight className="absolute -bottom-2 -left-2.5 w-5 h-5 text-amber-500 rotate-90" />
               </div>
             </div>
-          </div>
-
-          {/* Connector from Landing Page to CRM Comercial */}
-          <div className="w-full relative h-12 flex justify-center">
-            <div className={`h-12 w-px ${isLight ? 'bg-zinc-300' : 'bg-zinc-700'} relative`}>
-              <ChevronRight className={`absolute -bottom-2 -left-2.5 w-5 h-5 ${isLight ? 'text-zinc-400' : 'text-zinc-500'} rotate-90`} />
+            {/* Connector under Branch 2 (Meta) */}
+            <div className="flex-1 flex justify-center">
+              <div className="h-10 w-px bg-red-500 relative">
+                <ChevronRight className="absolute -bottom-2 -left-2.5 w-5 h-5 text-red-500 rotate-90" />
+              </div>
             </div>
+            {/* Empty space under Branch 3 (Remarketing) - No downward connector */}
+            <div className="flex-1" />
           </div>
 
-          {/* Final CRM & Commercial Closure node */}
+          {/* Row 2: Intermediate Action Nodes (LP for Google & Instagram for Meta) */}
+          <div className="flex w-full justify-between gap-6 px-4 mt-1 z-10">
+            
+            {/* Google Search Flow: Landing Page por Produto + WhatsApp */}
+            <div className={`flex-1 ${cardBg} p-6 rounded-2xl text-left shadow-xl border-2 border-amber-500 flex flex-col justify-between`}>
+              <div className="flex items-start gap-3 mb-3">
+                <div className="p-3 bg-amber-500/20 rounded-xl border border-amber-500/40 text-amber-500 shrink-0">
+                  <Truck className="w-6 h-6" />
+                </div>
+                <div>
+                  <span className="text-xs uppercase tracking-wider text-amber-500 font-bold block">Fluxo Google Search</span>
+                  <h4 className={`text-lg font-black ${titleColor}`}>Landing Page por Produto + WhatsApp</h4>
+                </div>
+              </div>
+              <p className={`text-xs ${subtitleColor} leading-relaxed mb-4`}>
+                Páginas dedicadas por categoria (Pás, Retros e Tratores) com fotos reais do pátio, horímetro, especificações técnicas e botão direto de WhatsApp.
+              </p>
+              <div className="bg-amber-500/10 border border-amber-500/30 px-3 py-2 rounded-xl flex items-center justify-between">
+                <span className="text-[11px] uppercase tracking-wider text-amber-500 font-bold">Contato Rápido</span>
+                <span className="text-xs font-black text-amber-400">Rodrigo / Jean (WhatsApp)</span>
+              </div>
+            </div>
+
+            {/* Meta Ads Flow: Perfil do Instagram Estruturado (Autoridade & Confiança) */}
+            <div className={`flex-1 ${cardBg} p-6 rounded-2xl text-left shadow-xl border-2 border-red-500 flex flex-col justify-between`}>
+              <div className="flex items-start gap-3 mb-3">
+                <div className="p-3 bg-red-500/20 rounded-xl border border-red-500/40 text-red-500 shrink-0">
+                  <Instagram className="w-6 h-6" />
+                </div>
+                <div>
+                  <span className="text-xs uppercase tracking-wider text-red-500 font-bold block">Fluxo Meta Ads</span>
+                  <h4 className={`text-lg font-black ${titleColor}`}>Perfil do Instagram (Autoridade & Confiança)</h4>
+                </div>
+              </div>
+              <p className={`text-xs ${subtitleColor} leading-relaxed mb-4`}>
+                Perfil estruturado com vídeos e fotos da rotina no pátio de Palmas, maquinário real e entregas, quebrando desconfiança antes do contato.
+              </p>
+              <div className="bg-red-500/10 border border-red-500/30 px-3 py-2 rounded-xl flex items-center justify-between">
+                <span className="text-[11px] uppercase tracking-wider text-red-500 font-bold">Link da Bio / Botão</span>
+                <span className="text-xs font-black text-red-400">Mensagem Padrão de Interesse</span>
+              </div>
+            </div>
+
+            {/* Empty column placeholder on the right for symmetry */}
+            <div className="flex-1 flex flex-col items-center justify-center p-6 border-2 border-dashed border-zinc-800/40 rounded-2xl opacity-40">
+              <span className="text-xs text-zinc-500 text-center font-medium">Fluxo independente de expansão pós-30 dias</span>
+            </div>
+
+          </div>
+
+          {/* Convergence Lines and Horizontal Bridge from Google LP and Instagram */}
+          <div className="w-full flex justify-between gap-6 px-4 mt-2">
+            {/* Col 1: Google vertical line & half-bridge */}
+            <div className="flex-1 flex flex-col items-center relative">
+              <div className="h-8 w-px bg-amber-500" />
+              {/* Horizontal line starting exactly at the center vertical line and extending to the middle of the gap */}
+              <div className="absolute bottom-0 left-1/2 -right-3 h-0.5 bg-gradient-to-r from-amber-500 via-amber-600 to-emerald-500" />
+            </div>
+
+            {/* Col 2: Meta vertical line & half-bridge */}
+            <div className="flex-1 flex flex-col items-center relative">
+              <div className="h-8 w-px bg-red-500" />
+              {/* Horizontal line starting at the middle of the gap and ending exactly at the center vertical line */}
+              <div className="absolute bottom-0 right-1/2 -left-3 h-0.5 bg-gradient-to-r from-emerald-500 via-red-600 to-red-500" />
+            </div>
+
+            {/* Col 3: Empty placeholder */}
+            <div className="flex-1" />
+          </div>
+
+          {/* Central drop line to Commercial starting exactly at the midpoint of the horizontal bridge */}
+          <div className="w-full flex justify-between gap-6 px-4">
+            <div className="flex-1 flex justify-end relative">
+              <div className="absolute top-0 -right-3 h-8 w-px bg-emerald-500">
+                <ChevronRight className="absolute -bottom-2 -left-2.5 w-5 h-5 text-emerald-500 rotate-90" />
+              </div>
+            </div>
+            <div className="flex-1" />
+            <div className="flex-1" />
+          </div>
+
+          {/* Final Row: Commercial Process & Pix Closure Node */}
           <div className="flex w-full flex-col items-center mt-2 relative z-10">
-            <div className={`${isLight ? 'bg-emerald-50 border-emerald-300 text-emerald-800' : 'bg-emerald-950/40 border-emerald-500/50 text-emerald-400'} border-2 px-10 py-5 rounded-2xl flex items-center gap-4 shadow-xl max-w-xl w-full justify-center`}>
-              <ShieldCheck className="w-7 h-7 text-emerald-500 shrink-0" />
+            <div className={`${isLight ? 'bg-emerald-50 border-emerald-300 text-emerald-800' : 'bg-emerald-950/40 border-emerald-500/50 text-emerald-400'} border-2 px-10 py-5 rounded-2xl flex items-center gap-4 shadow-xl max-w-2xl w-full justify-center`}>
+              <ShieldCheck className="w-8 h-8 text-emerald-500 shrink-0" />
               <div className="text-left">
-                <span className="text-lg font-black block">Processo Comercial, CRM & Fechamento Pix</span>
-                <span className={`text-xs ${isLight ? 'text-emerald-700' : 'text-emerald-300'}`}>Triagem MQL/SQL • Chamada de Vídeo ao Vivo • Frete de Retorno Otimizado • Contrato & Pix</span>
+                <span className="text-lg font-black block">Processo Comercial Consultivo, CRM & Fechamento Pix</span>
+                <span className={`text-xs ${isLight ? 'text-emerald-700' : 'text-emerald-300'}`}>
+                  Triagem MQL/SQL • Atendimento no WhatsApp • Chamada de Vídeo ao Vivo no Pátio • Frete de Retorno Otimizado • Contrato & Pix
+                </span>
               </div>
             </div>
           </div>
@@ -689,36 +758,62 @@ function RenderBlock({ slide }: { slide: any }) {
 
   if (type === 'spreadsheet_placeholder') {
     return (
-      <div>
-         <div className="flex items-center gap-4 mb-12">
-           <FileSpreadsheet className="w-10 h-10 text-red-600" />
+      <div className="flex flex-col items-center max-w-6xl mx-auto w-full">
+         <div className="flex items-center gap-4 mb-8 self-start">
+           <FileSpreadsheet className="w-10 h-10 text-red-600 shrink-0" />
            <h2 className={`text-4xl font-bold ${titleColor}`}>{d.titulo}</h2>
          </div>
          
-         <div className="w-full bg-zinc-900 border border-zinc-800 rounded-2xl p-8 shadow-xl">
-           <div className="grid md:grid-cols-4 gap-6">
-             <div className="bg-zinc-950 p-6 rounded-xl border border-zinc-800">
-               <span className="text-xs text-amber-500 font-bold uppercase tracking-wider block mb-2">Semanas 1 e 2 (Outubro)</span>
-               <h4 className="font-bold text-white mb-2">Onboarding & Setup</h4>
-               <p className="text-xs text-zinc-400 leading-relaxed">Coleta de acessos Google Ads/Meta, criação da conta de anúncios, definição de palavras-chave geolocalizadas e estruturação das Landing Pages de categorias.</p>
+         <div className={`w-full rounded-2xl border-2 ${isLight ? 'border-zinc-200 bg-white shadow-xl' : 'border-zinc-800 bg-zinc-900 shadow-2xl'} p-4 md:p-6 flex flex-col items-center gap-6`}>
+           {d.imagem_url && (
+             <div className="w-full rounded-xl overflow-hidden border border-zinc-800/60 bg-zinc-950 flex items-center justify-center relative group">
+               <img 
+                 src={d.imagem_url} 
+                 alt="Cronograma de Entregas" 
+                 className="w-full h-auto object-contain cursor-pointer transition-transform duration-300 group-hover:scale-[1.01]" 
+                 style={{ maxHeight: '720px' }} 
+                 onClick={() => setExpandedImage(d.imagem_url)}
+               />
+               <div 
+                 onClick={() => setExpandedImage(d.imagem_url)}
+                 className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer"
+               >
+                 <span className="px-4 py-2 bg-zinc-900/90 text-white rounded-xl text-sm font-bold border border-zinc-700 shadow-xl flex items-center gap-2">
+                   🔍 Clique para Expandir Imagem
+                 </span>
+               </div>
              </div>
-             <div className="bg-zinc-950 p-6 rounded-xl border border-zinc-800">
-               <span className="text-xs text-amber-500 font-bold uppercase tracking-wider block mb-2">Semanas 3 e 4 (Outubro)</span>
-               <h4 className="font-bold text-white mb-2">Lançamento de Campanhas</h4>
-               <p className="text-xs text-zinc-400 leading-relaxed">Publicação das Landing Pages, início dos anúncios de busca no Google Ads, primeiros vídeos gravados por Jean/Rodrigo rodando no Meta Ads e integração do CRM.</p>
-             </div>
-             <div className="bg-zinc-950 p-6 rounded-xl border border-zinc-800">
-               <span className="text-xs text-amber-500 font-bold uppercase tracking-wider block mb-2">Novembro de 2026</span>
-               <h4 className="font-bold text-white mb-2">Otimização & MQL/SQL</h4>
-               <p className="text-xs text-zinc-400 leading-relaxed">Ajuste fino de termos negativos no Google, cadência de atendimento via WhatsApp, rotação de vídeos de estoque e validação do CPL e custo por oportunidade.</p>
-             </div>
-             <div className="bg-zinc-950 p-6 rounded-xl border border-zinc-800">
-               <span className="text-xs text-amber-500 font-bold uppercase tracking-wider block mb-2">Dezembro de 2026</span>
-               <h4 className="font-bold text-white mb-2">Consolidação & Pré-Escala</h4>
-               <p className="text-xs text-zinc-400 leading-relaxed">Fechamento do trimestre com todos os indicadores consolidados, validação de metas de 5 a 6 máquinas/mês e planejamento de escala para R$ 5.200/mês e expansão de verba.</p>
+           )}
+
+           {d.link_planilha && (
+             <a
+               href={d.link_planilha}
+               target="_blank"
+               rel="noopener noreferrer"
+               className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-base shadow-lg shadow-red-950/40 hover:shadow-red-600/30 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
+             >
+               <FileSpreadsheet className="w-5 h-5" />
+               <span>Acessar Cronograma de Entregas no Google Sheets</span>
+               <ExternalLink className="w-4 h-4 opacity-80" />
+             </a>
+           )}
+         </div>
+
+         {/* Fullscreen Lightbox Modal */}
+         {expandedImage && (
+           <div 
+             className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 md:p-12 animate-in fade-in duration-300"
+             onClick={() => setExpandedImage(null)}
+           >
+             <div className="relative max-w-7xl w-full h-full flex items-center justify-center">
+               <img 
+                 src={expandedImage} 
+                 alt="Fullscreen" 
+                 className="max-w-full max-h-full object-contain rounded-lg shadow-2xl animate-in zoom-in-95 duration-300" 
+               />
              </div>
            </div>
-         </div>
+         )}
       </div>
     )
   }

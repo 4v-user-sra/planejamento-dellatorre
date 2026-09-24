@@ -50,7 +50,7 @@ export const presentationData = {
           "Estratégia de Aquisição (Google Ads + Meta)",
           "Drawflow do Funil de Conversão & CRM",
           "Workflow de Vídeos de Autoridade & Conteúdo",
-          "Cronograma de Execução & Plano de Mídia"
+          "Cronograma de Execução & Fases"
         ]
       }
     },
@@ -206,18 +206,18 @@ export const presentationData = {
             "tipo": "positivo"
           },
           {
-            "titulo": "Navegação por Filtros Técnicos Avançados (Ponto Forte)",
-            "texto": "Catálogo estruturado com filtros por horímetro, ano, tonelagem e aplicação, facilitando a rápida localização do maquinário desejado.",
+            "titulo": "ESCALA E ESTRUTURA DE FROTA PRÓPRIA (PONTO FORTE)",
+            "texto": "Possuem uma frota de mais de 11 mil máquinas e rede própria de mecânicos e suporte, o que transmite extrema solidez e elimina o medo de desamparo operacional para o cliente.",
             "tipo": "positivo"
           },
           {
-            "titulo": "Desgaste Severo de Equipamentos de Locação (Ponto Fraco)",
-            "texto": "Máquinas provenientes de operações pesadas de locação contínua podem carregar desgaste severo e múltiplos operadores, gerando receio em compradores exigentes.",
+            "titulo": "SEMINOVOS COMO CANAL SECUNDÁRIO (OPORTUNIDADE DELLATORRE)",
+            "texto": "O foco principal do modelo de negócio da Armac é a locação. A venda de seminovos atua apenas como desmobilização secundária, tirando a prioridade da venda especializada, onde a Dellatorre se posiciona com foco e dedicação.",
             "tipo": "negativo"
           },
           {
-            "titulo": "Atendimento Corporativo Burocrático (Oportunidade Dellatorre)",
-            "texto": "Processo de cotação passa por triagens comerciais lentas e formulários extensos, contrastando com a agilidade do contato direto no WhatsApp com os fundadores da Dellatorre.",
+            "titulo": "JORNADA COMERCIAL COM FRICÇÃO DE COTAÇÃO (OPORTUNIDADE DELLATORRE)",
+            "texto": "O processo passa pela adição do produto em página de orçamento, seleção de período e local de entrega, preenchimento de nome, e-mail e telefone para aguardar o retorno da equipe. A Dellatorre supera essa barreira com atendimento ágil, direto e sem burocracia no WhatsApp.",
             "tipo": "negativo"
           }
         ]
@@ -247,8 +247,8 @@ export const presentationData = {
             "tipo": "negativo"
           },
           {
-            "titulo": "Inflexibilidade para Trocas e Negociações Locais (Oportunidade Dellatorre)",
-            "texto": "Grandes corporações não aceitam veículos, caminhonetes ou máquinas usadas como parte do pagamento, perdendo a flexibilidade que a Dellatorre oferece aos produtores.",
+            "titulo": "JORNADA COMERCIAL COM MUITA FRICÇÃO (OPORTUNIDADE DELLATORRE)",
+            "texto": "O checkout de cotação impõe etapas excessivas para avançar: 1) Adicionar à aba de orçamento; 2) Selecionar modelo; 3) Informar localização, período e prazo de entrega; 4) Preencher nome, e-mail, telefone e DDD; 5) Concluir e aguardar contato do time. Na Dellatorre, eliminamos todo esse atrito conectando o cliente de forma ágil e humanizada direto pelo WhatsApp.",
             "tipo": "negativo"
           }
         ]
@@ -278,8 +278,8 @@ export const presentationData = {
             "tipo": "negativo"
           },
           {
-            "titulo": "Preços Rígidos de Concessionária Oficial (Oportunidade Dellatorre)",
-            "texto": "Tabela de preços engessada de concessionária oficial e prazos fabris de entrega, permitindo que a Dellatorre ganhe em custo-benefício de seminovos selecionados e pronta-entrega.",
+            "titulo": "CHECKOUT DE COTAÇÃO SEM CONTATO IMEDIATO (OPORTUNIDADE DELLATORRE)",
+            "texto": "O fluxo de cotação exige nome, e-mail e telefone, mas após o envio do formulário o usuário não recebe nenhum tipo de retorno instantâneo nem número visível para ligar, ficando totalmente à mercê de a equipe deles entrar em contato com o comprador. Na Dellatorre, eliminamos essa espera conectando o lead diretamente no WhatsApp.",
             "tipo": "negativo"
           }
         ]
@@ -290,8 +290,8 @@ export const presentationData = {
       "slide_type": "moodboard_identity",
       "content_slots": {
         "titulo": "Identidade Visual & Posicionamento de Força",
-        "tipografia_principal": "Impacto & Solidez",
-        "tipografia_secundaria": "Clareza & Técnica",
+        "tipografia_principal": "Microgramma D Extended",
+        "tipografia_secundaria": "Clareza & Técnica (Inter / Roboto)",
         "paleta_cores": ["#EAB308", "#18181B", "#DC2626", "#F4F4F5", "#71717A"]
       }
     },
@@ -321,7 +321,7 @@ export const presentationData = {
         "objecoes_bullets": [
           "A máquina seminova vai aguentar a rotina pesada da fazenda sem dar dor de cabeça mecânica?",
           "Posso confiar em transferir o valor via Pix antes do maquinário ser embarcado no caminhão prancha?",
-          "O valor do frete até a minha fazenda não vai encarecer demais o negócio?"
+          "O valor do frete até o meu local não vai encarecer demais a negociação?"
         ]
       }
     },
@@ -340,7 +340,7 @@ export const presentationData = {
         "canais": "Google Search, Indicações de Mercado, WhatsApp e Portais Especializados",
         "dores_bullets": [
           "Prazos contratuais apertados em obras e mineração que exigem equipamentos disponíveis com urgência imediata.",
-          "Preços proibitivos e filas de espera de concessionárias para máquinas zero km.",
+          "Preços exorbitantes e filas de espera de concessionárias para máquinas zero km.",
           "Experiências prévias com equipamentos maquiados que apresentaram falhas hidráulicas ou estruturais logo após a compra."
         ],
         "desejos_bullets": [
@@ -359,36 +359,28 @@ export const presentationData = {
       "id": "17_objetivo_smart",
       "slide_type": "smart_goal_okr",
       "content_slots": {
-        "titulo": "Objetivos Estratégicos & Metas de Performance",
-        "fase_projeto": "Fase de Calibração, Validação de Indicadores & Pré-Escala (Até Dez/2026)",
-        "objetivo_geral": "Até Dezembro de 2026, encontrar todos os indicadores de tráfego e de performance comercial com base na estratégia de campanhas definida (Google Ads + Meta Ads + CRM). A partir desses dados, definir se é possível reduzir custos de aquisição e validar se faz sentido consolidar os indicadores para então planejar a escala acelerada do negócio após esses 3 meses iniciais (período flexível e variável de calibração).",
-        "kr1_texto": "Mapear e consolidar 100% dos indicadores de performance de marketing e vendas (CPL, taxa de qualificação MQL/SQL, Custo por Oportunidade, Taxa de Conversão e CAC projetado).",
-        "kr2_texto": "Atingir o ROI 1 do projeto no primeiro ciclo (Break-even garantido: a venda de apenas 1 máquina cobre mais de 4 meses de honorários e verba de mídia).",
-        "kr3_texto": "Estruturar o funil comercial para atingir a meta operacional de 5 a 6 máquinas vendidas/mês no trimestre inicial e preparar o terreno para a meta de cruzeiro de 8 a 10 máquinas/mês.",
-        "insights_operacionais": [
-          "Foco prioritário em Google Ads (Intenção de Compra Direta)",
-          "Implementação de CRM com cadência de atendimento rápido via WhatsApp",
-          "Três primeiros meses com flexibilidade e foco em calibração de métricas"
-        ]
+        "titulo": "Objetivos Estratégicos & Balizamento de Metas",
+        "fase_projeto": "Fase de Calibração, Reconhecimento & Validação de Indicadores (Out a Dez/2026)",
+        "objetivo_geral": "Até Dezembro de 2026, estabelecer a presença digital e autoridade da Dellatorre nos polos do agronegócio e construção (TO, GO, DF, MT, MS, MA e PA), validando os indicadores reais de marketing e vendas (CPL, taxa de conversão de curiosos para MQL/SQL, Custo por Oportunidade e CAC), com base na venda de ticket alto (R$ 200+)."
       }
     },
     {
       "id": "13_estrategia",
       "slide_type": "vertical_feature_list",
       "content_slots": {
-        "titulo": "Pilares Estratégicos de Aquisição & Conversão",
+        "titulo": "Pilares Estratégicos de Aquisição & Conversão Consultiva",
         "features": [
           {
-            "titulo": "Google Ads como Motor Primário de Intenção e Alta Qualificação",
-            "descricao": "Captura ativa de clientes com intenção imediata de compra através de campanhas na Rede de Pesquisa do Google geolocalizadas em polos agrícolas e mineradores (Palmas, interior do TO, MT, PA, MA, GO e Nordeste). Anúncios direcionados para termos quentes: 'Pá Carregadeira à Venda', 'Comprar Retroescavadeira Usada', 'Trator Agrícola Seminovo', 'Caminhão Caçamba'."
+            "titulo": "1. Reconhecimento de Marca & Construção de Confiança no Meta Ads (Fase 1 - R$ 1.000/mês)",
+            "descricao": "Como a venda é de altíssimo ticket (R$ 200k a R$ 500k+) e o mercado de seminovos/OLX sofre com desconfiança e risco de golpes, a estratégia inicial aloca R$ 1.000 em campanha de Reconhecimento e Autoridade de Marca no Meta Ads (Facebook/Instagram). O objetivo é apresentar a Dellatorre, mostrar o pátio físico em Palmas, estoque real e equipe técnica para produtores rurais e empreiteiros nos polos foco (TO, GO, DF, MT, MS, MA e PA), quebrando a barreira da desconfiança antes da oferta direta."
           },
           {
-            "titulo": "Landing Pages Ágeis por Categoria Integradas ao WhatsApp",
-            "descricao": "Desenvolvimento de páginas de destino rápidas e responsivas para as principais categorias (Pás Carregadeiras, Retroescavadeiras, Tratores, Caminhões e Consignados). Cada página apresentará diferenciais, pátio, fotos reais de estoque e botão direto para o WhatsApp do vendedor com disparo de tags de conversão."
+            "titulo": "2. Google Ads Search de Alta Intenção + Landing Pages Ágeis por Categoria (Fase 1 - R$ 1.500/mês)",
+            "descricao": "Investimento de R$ 1.500 focado na Rede de Pesquisa do Google (Search) capturando termos de alta intenção comercial no momento exato em que o comprador busca adquirir o equipamento ('comprar pá carregadeira seminova', 'retroescavadeira à venda'). O tráfego direciona para Landing Pages dedicadas por categoria (Pás Carregadeiras, Retroescavadeiras e Tratores) com fotos reais, horímetro, laudo visual e botão de contato direto no WhatsApp com Rodrigo e Jean."
           },
           {
-            "titulo": "Autoridade Humana no Meta Ads & Estruturação de CRM Comercial",
-            "descricao": "Gravação de vídeos curtos com Jean e Rodrigo Dellatorre no pátio (mostrando motores, testes práticos, dicas de manutenção e entregas concluídas) para rodar como prova social e remarketing. Em paralelo, implementação de CRM comercial para triagem rigorosa de MQL/SQL e resposta em até 5 minutos."
+            "titulo": "3. Atendimento Consultivo & Expansão para Remarketing (Fase 2 - Daqui a 30 Dias)",
+            "descricao": "O fechamento exige venda altamente consultiva: Rodrigo e Jean realizarão atendimento ativo via WhatsApp com chamadas de vídeo ao vivo no pátio para demonstração técnica das máquinas e cálculo do frete de retorno otimizado. Na próxima fase (daqui a 30 dias), após validação da qualificação e intenção de compra da Fase 1, será implementada a camada de Remarketing e Conversão no Meta Ads para reimpactar visitantes das páginas e acelerar o fechamento."
           }
         ]
       }
@@ -397,85 +389,59 @@ export const presentationData = {
       "id": "13_estrategia_campanhas",
       "slide_type": "campaign_strategy_boxes",
       "content_slots": {
-        "titulo": "Proposta de Alocação de Verba de Mídia (R$ 2.000 a R$ 2.500/mês)",
+        "titulo": "Proposta de Alocação de Verba de Mídia (R$ 2.500/mês - Fase 1)",
         "boxes": [
           {
-            "percentual": "70%",
-            "nome": "Google Search (Intenção Direta)",
-            "detalhes": "R$ 1.400 a R$ 1.750/mês. Campanhas na Rede de Pesquisa focadas em palavras-chave de fundo de funil (pás carregadeiras, retroescavadeiras, tratores e caminhões) em Tocantins, Matopiba, Mato Grosso e Pará."
+            "percentual": "60%",
+            "nome": "Google Ads Search (Intenção Direta)",
+            "detalhes": "R$ 1.500/mês (Fase 1). Campanhas na Rede de Pesquisa focadas em palavras-chave de alta intenção comercial e fundo de funil ('comprar pá carregadeira seminova', 'retroescavadeira à venda') direcionando para Landing Pages de produto em TO, GO, DF, MT, MS, MA e PA."
           },
           {
-            "percentual": "20%",
-            "nome": "Meta Ads (Autoridade & Catálogo)",
-            "detalhes": "R$ 400 a R$ 500/mês. Vídeos com Jean e Rodrigo no pátio, fotos detalhadas das máquinas e depoimentos de compradores interestaduais para aquecer o público e gerar desejo de marca."
+            "percentual": "40%",
+            "nome": "Meta Ads (Reconhecimento & Autoridade)",
+            "detalhes": "R$ 1.000/mês (Fase 1). Campanha de reconhecimento e autoridade no Facebook e Instagram com vídeos institucionais, apresentação dos fundadores e máquinas no pátio físico de Palmas, quebrando a barreira da desconfiança e transmitindo solidez no Agro."
           },
           {
-            "percentual": "10%",
-            "nome": "Remarketing de Busca & Captação",
-            "detalhes": "R$ 200 a R$ 250/mês. Campanhas de remarketing para quem visitou a Landing Page e anúncios de captação de máquinas consignadas para expandir o inventário sem imobilização de capital."
+            "percentual": "Fase 2",
+            "nome": "Remarketing & Conversão WhatsApp",
+            "detalhes": "Implementação planejada para a próxima fase (daqui a 30 dias), após análise da qualificação e do volume de intenção de compra da Fase 1, reimpactando visitantes das Landing Pages e perfis para conversão direta no WhatsApp."
           }
         ]
-      }
-    },
-    {
-      "id": "21_criativos",
-      "slide_type": "creative_workflow",
-      "content_slots": {
-        "titulo": "Workflow de Produção de Vídeos de Autoridade",
-        "subtitulo": "Processo estruturado pela V4 Company para transformar o conhecimento técnico de Jean e Rodrigo em ativos de venda",
-        "passos": [
-          { "titulo": "Roteiro & Script (V4)", "icone": "FileText" },
-          { "titulo": "Alinhamento no Grupo", "icone": "CheckCircle2" },
-          { "titulo": "Gravação no Pátio (Jean/Rodrigo)", "icone": "Video" },
-          { "titulo": "Edição Profissional (V4)", "icone": "CheckCircle2" },
-          { "titulo": "Veiculação & Tráfego", "icone": "Rocket" }
-        ],
-        "link_exemplo": "https://docs.google.com"
       }
     },
     {
       "id": "18_drawflow_funil",
       "slide_type": "visual_drawflow",
       "content_slots": {
-        "titulo": "Drawflow do Funil de Intenção & Conversão Dellatorre",
-        "subtitulo": "Arquitetura integrada para geração de leads qualificados e vendas de alto ticket",
-        "orcamento_total": "R$ 2.000 a R$ 2.500 / mês"
+        "titulo": "Drawflow do Funil de Intenção & Conversão Consultiva",
+        "subtitulo": "Fluxos integrados: Google Search direto para LP + WhatsApp e Meta Ads para Instagram com autoridade, convergindo no atendimento comercial",
+        "orcamento_total": "R$ 2.500 / mês"
       }
     },
     {
       "id": "19_cronograma",
       "slide_type": "spreadsheet_placeholder",
       "content_slots": {
-        "titulo": "Cronograma & Fases de Implementação (Outubro a Dezembro)",
-        "tipo_planilha": "Cronograma de Aceleração",
-        "imagem_url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
-        "link_planilha": "https://docs.google.com"
+        "titulo": "Cronograma & Fases de Implementação Estratégica",
+        "tipo_planilha": "Cronograma de Entregas & Aceleração",
+        "imagem_url": "https://i.imgur.com/UmyXoHk.png",
+        "link_planilha": "https://docs.google.com/spreadsheets/d/1o7UvuCCfUHVACesdONna194aPgc8fMP0_hG4WOCQMRQ/edit?gid=652949990#gid=652949990"
       }
     },
     {
-      "id": "20_plano_midia",
-      "slide_type": "media_projection",
+      "id": "21_criativos",
+      "slide_type": "creative_workflow",
       "content_slots": {
-        "titulo": "Projeção de Metas & Retorno sobre o Investimento",
-        "orcamento": "R$ 2.000 a R$ 2.500 / mês de Mídia",
-        "cenarios": [
-          {
-            "nome": "Conservador (Validação)",
-            "pedidos": "3 a 4",
-            "cpa": "R$ 500 - R$ 700 / Lead Qualificado"
-          },
-          {
-            "nome": "Meta Trimestral (Kickoff)",
-            "pedidos": "5 a 6",
-            "cpa": "R$ 350 - R$ 450 / Lead Qualificado"
-          },
-          {
-            "nome": "Meta de Cruzeiro (Escala)",
-            "pedidos": "8 a 10",
-            "cpa": "R$ 250 - R$ 300 / Lead Qualificado"
-          }
+        "titulo": "Workflow de Produção de Vídeos de Autoridade & Confiança",
+        "subtitulo": "Processo estruturado pela V4 Company para transformar o conhecimento prático de Jean e Rodrigo em ativos que destravam vendas de R$ 500k",
+        "passos": [
+          { "titulo": "Roteiro & Script Técnico (V4)", "icone": "FileText" },
+          { "titulo": "Alinhamento no Grupo", "icone": "CheckCircle2" },
+          { "titulo": "Gravação no Pátio (Jean/Rodrigo)", "icone": "Video" },
+          { "titulo": "Edição & Legendagem (V4)", "icone": "CheckCircle2" },
+          { "titulo": "Tráfego & Distribuição", "icone": "Rocket" }
         ],
-        "alcance_estimado": "Com investimento direcionado no Google Search e Meta Ads geolocalizado, estima-se alcançar mensalmente mais de 45.000 produtores rurais, usineiros e empreiteiros com poder aquisitivo no Tocantins, Matopiba, Pará e Mato Grosso."
+        "link_exemplo": "https://docs.google.com/document/d/1Nv3B_kPaTHqY6zjVtYbiE5BHNB7qvmluCG2WHdLL-Go/edit?tab=t.0"
       }
     }
   ]
