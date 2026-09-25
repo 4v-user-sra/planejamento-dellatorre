@@ -359,16 +359,38 @@ function RenderBlock({ slide }: { slide: any }) {
 
   if (type === 'campaign_strategy_boxes') {
     return (
-      <div>
-        <h2 className={`text-4xl font-bold ${titleColor} text-center mb-16`}>{d.titulo}</h2>
-        <div className="flex flex-col md:flex-row gap-6 w-full">
-          {d.boxes?.map((box: any, i: number) => (
-            <div key={i} className={`flex-1 ${cardBg} border rounded-2xl p-8 flex flex-col shadow-sm hover:-translate-y-1 transition-transform`}>
-              <span className="text-5xl font-bold text-red-600 mb-4">{box.percentual}</span>
-              <h3 className={`text-2xl font-bold ${titleColor} mb-4`}>{box.nome}</h3>
-              <p className={`text-lg ${subtitleColor} leading-relaxed`}>{box.detalhes}</p>
-            </div>
-          ))}
+      <div className="w-full max-w-5xl mx-auto">
+        <h2 className={`text-4xl font-bold ${titleColor} text-center mb-10`}>{d.titulo}</h2>
+        <div className="flex flex-col gap-6 w-full">
+          {d.boxes?.map((box: any, i: number) => {
+            const isFirst = i === 0;
+            return (
+              <div 
+                key={i} 
+                className={`w-full ${cardBg} border-2 ${isFirst ? 'border-red-500/80 shadow-red-950/20' : isLight ? 'border-zinc-200' : 'border-zinc-800'} rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-10 shadow-xl hover:-translate-y-0.5 transition-all duration-300 relative overflow-hidden`}
+              >
+                {/* Left Side: Percentual & Valor */}
+                <div className="flex flex-col items-start md:items-center justify-center shrink-0 min-w-[200px] md:border-r md:border-zinc-800/80 md:pr-8">
+                  <span className="text-4xl md:text-5xl font-black text-red-600 leading-none mb-2">{box.percentual}</span>
+                  {box.valor && (
+                    <span className="text-xs font-bold uppercase tracking-wider text-amber-500 font-mono">
+                      {box.valor}
+                    </span>
+                  )}
+                </div>
+
+                {/* Right Side: Title & Elaborated Description */}
+                <div className="flex-1 text-left">
+                  <h3 className={`text-xl md:text-2xl font-black mb-2.5 ${isFirst ? 'text-red-500' : titleColor}`}>
+                    {box.nome}
+                  </h3>
+                  <p className={`text-sm md:text-base ${subtitleColor} leading-relaxed font-normal`}>
+                    {box.detalhes}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     )
@@ -522,99 +544,94 @@ function RenderBlock({ slide }: { slide: any }) {
           </div>
 
           {/* Vertical line from Top */}
-          <div className={`h-10 w-px ${isLight ? 'bg-zinc-300' : 'bg-zinc-700'}`} />
+          <div className={`h-16 w-px ${isLight ? 'bg-zinc-300' : 'bg-zinc-700'}`} />
           
           {/* Horizontal span line covering all 3 branches */}
           <div className={`w-[85%] h-px ${isLight ? 'bg-zinc-300' : 'bg-zinc-700'}`} />
           
           {/* 3 Dropdown lines */}
           <div className="flex w-[85%] justify-between">
-            <div className={`h-10 w-px ${isLight ? 'bg-zinc-300' : 'bg-zinc-700'} relative`}>
+            <div className={`h-14 w-px ${isLight ? 'bg-zinc-300' : 'bg-zinc-700'} relative`}>
               <ChevronRight className={`absolute -bottom-2 -left-2.5 w-5 h-5 ${isLight ? 'text-zinc-400' : 'text-zinc-500'} rotate-90`} />
             </div>
-            <div className={`h-10 w-px ${isLight ? 'bg-zinc-300' : 'bg-zinc-700'} relative`}>
+            <div className={`h-14 w-px ${isLight ? 'bg-zinc-300' : 'bg-zinc-700'} relative`}>
               <ChevronRight className={`absolute -bottom-2 -left-2.5 w-5 h-5 ${isLight ? 'text-zinc-400' : 'text-zinc-500'} rotate-90`} />
             </div>
-            <div className={`h-10 w-px ${isLight ? 'bg-zinc-300' : 'bg-zinc-700'} relative`}>
+            <div className={`h-14 w-px ${isLight ? 'bg-zinc-300' : 'bg-zinc-700'} relative`}>
               <ChevronRight className={`absolute -bottom-2 -left-2.5 w-5 h-5 ${isLight ? 'text-zinc-400' : 'text-zinc-500'} rotate-90`} />
             </div>
           </div>
 
           {/* 3 Campaign Branch Nodes */}
-          <div className="flex w-full justify-between gap-6 px-4 mt-2 z-10">
+          <div className="flex w-full justify-between gap-6 px-4 mt-3 z-10">
             
             {/* Branch 1: Google Ads (60%) */}
-            <div className={`flex-1 ${cardBg} p-6 rounded-2xl text-left shadow-xl border-2 border-amber-500/60 relative flex flex-col justify-between overflow-hidden`}>
+            <div className={`flex-1 ${cardBg} p-7 rounded-2xl text-left shadow-xl border-2 border-amber-500/60 relative flex flex-col justify-between overflow-hidden`}>
               <div className="absolute top-0 right-0 bg-amber-500 text-zinc-950 font-black text-xs px-3 py-1 rounded-bl-xl uppercase tracking-wider">
-                60% da Verba
+                60% (R$ 1.500/mês)
               </div>
               <div>
                 <div className="flex items-center gap-2 mb-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse" />
-                  <span className="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider">Motor Primário de Intenção</span>
+                  <span className="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider">Mês 1 e Mês 2+</span>
                 </div>
-                <h4 className={`font-black text-xl mb-1 ${titleColor}`}>Google Ads (Search)</h4>
-                <p className="text-2xl font-black text-amber-500 mb-3">R$ 1.500 <span className="text-xs font-semibold text-zinc-500">/mês</span></p>
-                <div className={`text-xs ${isLight ? 'text-zinc-600' : 'text-zinc-300'} space-y-1.5`}>
-                  <p className="text-amber-700 dark:text-amber-400 font-medium">⚡ Busca de alta intenção comercial em TO, GO, DF, MT, MS, MA e PA</p>
+                <h4 className={`font-black text-xl mb-1 ${titleColor}`}>Google Ads Search</h4>
+                <p className="text-2xl font-black text-amber-500 mb-2">R$ 1.500 <span className="text-xs font-semibold text-zinc-500">/mês</span></p>
+                <div className={`text-xs ${isLight ? 'text-zinc-600' : 'text-zinc-400'}`}>
+                  <p className="text-amber-700 dark:text-amber-400 font-medium">⚡ 2 Campanhas: Pás Carregadeiras (R$ 800) + Retros e Outras Linhas (R$ 700)</p>
                 </div>
               </div>
             </div>
 
-            {/* Branch 2: Meta Ads (40%) */}
-            <div className={`flex-1 ${cardBg} p-6 rounded-2xl text-left shadow-xl border-2 border-red-500/60 relative flex flex-col justify-between overflow-hidden`}>
+            {/* Branch 2: Meta Ads (40% Mês 1 -> 24% Mês 2+) */}
+            <div className={`flex-1 ${cardBg} p-7 rounded-2xl text-left shadow-xl border-2 border-red-500/60 relative flex flex-col justify-between overflow-hidden`}>
               <div className="absolute top-0 right-0 bg-red-600 text-white font-black text-xs px-3 py-1 rounded-bl-xl uppercase tracking-wider">
-                40% da Verba
+                Mês 1: R$ 1.000 • Mês 2+: R$ 600
               </div>
               <div>
                 <div className="flex items-center gap-2 mb-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-red-500" />
                   <span className="text-xs font-bold text-red-600 dark:text-red-400 uppercase tracking-wider">Quebra de Desconfiança</span>
                 </div>
-                <h4 className={`font-black text-xl mb-1 ${titleColor}`}>Meta Ads (Reconhecimento & Autoridade)</h4>
-                <p className="text-2xl font-black text-red-500 mb-3">R$ 1.000 <span className="text-xs font-semibold text-zinc-500">/mês</span></p>
-                <div className={`text-xs ${isLight ? 'text-zinc-600' : 'text-zinc-300'} space-y-1.5`}>
-                  <p className="text-red-700 dark:text-red-400 font-medium">🎯 Vídeos no pátio de Palmas, estoque real e prova social dos fundadores</p>
+                <h4 className={`font-black text-xl mb-1 ${titleColor}`}>Meta Reconhecimento</h4>
+                <p className="text-2xl font-black text-red-500 mb-2">R$ 1.000 <span className="text-xs font-semibold text-zinc-500">➔ R$ 600/mês</span></p>
+                <div className={`text-xs ${isLight ? 'text-zinc-600' : 'text-zinc-400'}`}>
+                  <p className="text-red-700 dark:text-red-400 font-medium">🎯 Vídeos no pátio, máquinas em teste e autoridade dos fundadores</p>
                 </div>
               </div>
             </div>
 
-            {/* Branch 3: Remarketing & Conversão (Expansão Futura - Finaliza aqui) */}
-            <div className={`flex-1 ${cardBg} p-6 rounded-2xl text-left shadow-xl border-2 border-dashed border-indigo-500/60 relative flex flex-col justify-between overflow-hidden opacity-90`}>
+            {/* Branch 3: Remarketing & Conversão (Mês 2+) */}
+            <div className={`flex-1 ${cardBg} p-7 rounded-2xl text-left shadow-xl border-2 border-indigo-500/60 relative flex flex-col justify-between overflow-hidden`}>
               <div className="absolute top-0 right-0 bg-indigo-600 text-white font-black text-xs px-3 py-1 rounded-bl-xl uppercase tracking-wider">
-                Fase 2 (30 Dias)
+                Mês 2+: 16% (R$ 400)
               </div>
               <div>
                 <div className="flex items-center gap-2 mb-2 text-indigo-500">
                   <span className="w-2.5 h-2.5 rounded-full bg-indigo-500" />
-                  <span className="text-xs font-bold uppercase tracking-wider">Expansão Futura</span>
+                  <span className="text-xs font-bold uppercase tracking-wider">Ativação no Mês 2</span>
                 </div>
-                <h4 className={`font-black text-xl mb-1 ${titleColor}`}>Remarketing & WhatsApp</h4>
-                <p className="text-2xl font-black text-indigo-500 mb-3">Ativação em 30d <span className="text-xs font-semibold text-zinc-500">/após validação</span></p>
-                <div className={`text-xs ${isLight ? 'text-zinc-600' : 'text-zinc-400'} space-y-1`}>
-                  <p className="text-indigo-600 dark:text-indigo-400 font-medium">🔄 Reimpacto de visitantes pós-análise de qualificação e intenção</p>
+                <h4 className={`font-black text-xl mb-1 ${titleColor}`}>Meta Remarketing</h4>
+                <p className="text-2xl font-black text-indigo-500 mb-2">R$ 400 <span className="text-xs font-semibold text-zinc-500">/mês</span></p>
+                <div className={`text-xs ${isLight ? 'text-zinc-600' : 'text-zinc-400'}`}>
+                  <p className="text-indigo-600 dark:text-indigo-400 font-medium">🔄 Reimpacto de visitantes das páginas e quem assistiu aos vídeos</p>
                 </div>
-              </div>
-              <div className="mt-4 pt-3 border-t border-zinc-800/60 flex items-center justify-center">
-                <span className="text-[11px] font-semibold text-indigo-400 uppercase tracking-wide">
-                  ✦ Finaliza em si mesmo (Etapa Futura)
-                </span>
               </div>
             </div>
 
           </div>
 
           {/* Downward connecting arrows for Branch 1 and Branch 2 ONLY */}
-          <div className="flex w-full justify-between gap-6 px-4 mt-2">
+          <div className="flex w-full justify-between gap-6 px-4 my-3">
             {/* Connector under Branch 1 (Google) */}
             <div className="flex-1 flex justify-center">
-              <div className="h-10 w-px bg-amber-500 relative">
+              <div className="h-16 w-px bg-amber-500 relative">
                 <ChevronRight className="absolute -bottom-2 -left-2.5 w-5 h-5 text-amber-500 rotate-90" />
               </div>
             </div>
             {/* Connector under Branch 2 (Meta) */}
             <div className="flex-1 flex justify-center">
-              <div className="h-10 w-px bg-red-500 relative">
+              <div className="h-16 w-px bg-red-500 relative">
                 <ChevronRight className="absolute -bottom-2 -left-2.5 w-5 h-5 text-red-500 rotate-90" />
               </div>
             </div>
@@ -623,67 +640,58 @@ function RenderBlock({ slide }: { slide: any }) {
           </div>
 
           {/* Row 2: Intermediate Action Nodes (LP for Google & Instagram for Meta) */}
-          <div className="flex w-full justify-between gap-6 px-4 mt-1 z-10">
+          <div className="flex w-full justify-between gap-6 px-4 my-2 z-10">
             
             {/* Google Search Flow: Landing Page por Produto + WhatsApp */}
-            <div className={`flex-1 ${cardBg} p-6 rounded-2xl text-left shadow-xl border-2 border-amber-500 flex flex-col justify-between`}>
-              <div className="flex items-start gap-3 mb-3">
+            <div className={`flex-1 ${cardBg} p-7 rounded-2xl text-left shadow-xl border-2 border-amber-500 flex flex-col justify-between`}>
+              <div className="flex items-start gap-3 mb-2">
                 <div className="p-3 bg-amber-500/20 rounded-xl border border-amber-500/40 text-amber-500 shrink-0">
                   <Truck className="w-6 h-6" />
                 </div>
                 <div>
                   <span className="text-xs uppercase tracking-wider text-amber-500 font-bold block">Fluxo Google Search</span>
-                  <h4 className={`text-lg font-black ${titleColor}`}>Landing Page por Produto + WhatsApp</h4>
+                  <h4 className={`text-lg font-black ${titleColor}`}>Landing Page por Categoria</h4>
                 </div>
               </div>
-              <p className={`text-xs ${subtitleColor} leading-relaxed mb-4`}>
-                Páginas dedicadas por categoria (Pás, Retros e Tratores) com fotos reais do pátio, horímetro, especificações técnicas e botão direto de WhatsApp.
+              <p className={`text-xs ${subtitleColor} leading-relaxed`}>
+                Páginas com fotos reais do pátio, horímetro, laudo e botão de contato direto no WhatsApp de Rodrigo e Jean.
               </p>
-              <div className="bg-amber-500/10 border border-amber-500/30 px-3 py-2 rounded-xl flex items-center justify-between">
-                <span className="text-[11px] uppercase tracking-wider text-amber-500 font-bold">Contato Rápido</span>
-                <span className="text-xs font-black text-amber-400">Rodrigo / Jean (WhatsApp)</span>
-              </div>
             </div>
 
             {/* Meta Ads Flow: Perfil do Instagram Estruturado (Autoridade & Confiança) */}
-            <div className={`flex-1 ${cardBg} p-6 rounded-2xl text-left shadow-xl border-2 border-red-500 flex flex-col justify-between`}>
-              <div className="flex items-start gap-3 mb-3">
+            <div className={`flex-1 ${cardBg} p-7 rounded-2xl text-left shadow-xl border-2 border-red-500 flex flex-col justify-between`}>
+              <div className="flex items-start gap-3 mb-2">
                 <div className="p-3 bg-red-500/20 rounded-xl border border-red-500/40 text-red-500 shrink-0">
                   <Instagram className="w-6 h-6" />
                 </div>
                 <div>
                   <span className="text-xs uppercase tracking-wider text-red-500 font-bold block">Fluxo Meta Ads</span>
-                  <h4 className={`text-lg font-black ${titleColor}`}>Perfil do Instagram (Autoridade & Confiança)</h4>
+                  <h4 className={`text-lg font-black ${titleColor}`}>Perfil do Instagram (Autoridade)</h4>
                 </div>
               </div>
-              <p className={`text-xs ${subtitleColor} leading-relaxed mb-4`}>
-                Perfil estruturado com vídeos e fotos da rotina no pátio de Palmas, maquinário real e entregas, quebrando desconfiança antes do contato.
+              <p className={`text-xs ${subtitleColor} leading-relaxed`}>
+                Rotina no pátio físico de Palmas, maquinário real e entregas, quebrando a desconfiança e gerando confiança.
               </p>
-              <div className="bg-red-500/10 border border-red-500/30 px-3 py-2 rounded-xl flex items-center justify-between">
-                <span className="text-[11px] uppercase tracking-wider text-red-500 font-bold">Link da Bio / Botão</span>
-                <span className="text-xs font-black text-red-400">Mensagem Padrão de Interesse</span>
-              </div>
             </div>
 
             {/* Empty column placeholder on the right for symmetry */}
             <div className="flex-1 flex flex-col items-center justify-center p-6 border-2 border-dashed border-zinc-800/40 rounded-2xl opacity-40">
-              <span className="text-xs text-zinc-500 text-center font-medium">Fluxo independente de expansão pós-30 dias</span>
             </div>
 
           </div>
 
           {/* Convergence Lines and Horizontal Bridge from Google LP and Instagram */}
-          <div className="w-full flex justify-between gap-6 px-4 mt-2">
+          <div className="w-full flex justify-between gap-6 px-4 my-2">
             {/* Col 1: Google vertical line & half-bridge */}
             <div className="flex-1 flex flex-col items-center relative">
-              <div className="h-8 w-px bg-amber-500" />
+              <div className="h-12 w-px bg-amber-500" />
               {/* Horizontal line starting exactly at the center vertical line and extending to the middle of the gap */}
               <div className="absolute bottom-0 left-1/2 -right-3 h-0.5 bg-gradient-to-r from-amber-500 via-amber-600 to-emerald-500" />
             </div>
 
             {/* Col 2: Meta vertical line & half-bridge */}
             <div className="flex-1 flex flex-col items-center relative">
-              <div className="h-8 w-px bg-red-500" />
+              <div className="h-12 w-px bg-red-500" />
               {/* Horizontal line starting at the middle of the gap and ending exactly at the center vertical line */}
               <div className="absolute bottom-0 right-1/2 -left-3 h-0.5 bg-gradient-to-r from-emerald-500 via-red-600 to-red-500" />
             </div>
@@ -695,7 +703,7 @@ function RenderBlock({ slide }: { slide: any }) {
           {/* Central drop line to Commercial starting exactly at the midpoint of the horizontal bridge */}
           <div className="w-full flex justify-between gap-6 px-4">
             <div className="flex-1 flex justify-end relative">
-              <div className="absolute top-0 -right-3 h-8 w-px bg-emerald-500">
+              <div className="absolute top-0 -right-3 h-12 w-px bg-emerald-500">
                 <ChevronRight className="absolute -bottom-2 -left-2.5 w-5 h-5 text-emerald-500 rotate-90" />
               </div>
             </div>
@@ -704,14 +712,17 @@ function RenderBlock({ slide }: { slide: any }) {
           </div>
 
           {/* Final Row: Commercial Process & Pix Closure Node */}
-          <div className="flex w-full flex-col items-center mt-2 relative z-10">
-            <div className={`${isLight ? 'bg-emerald-50 border-emerald-300 text-emerald-800' : 'bg-emerald-950/40 border-emerald-500/50 text-emerald-400'} border-2 px-10 py-5 rounded-2xl flex items-center gap-4 shadow-xl max-w-2xl w-full justify-center`}>
-              <ShieldCheck className="w-8 h-8 text-emerald-500 shrink-0" />
-              <div className="text-left">
-                <span className="text-lg font-black block">Processo Comercial Consultivo, CRM & Fechamento Pix</span>
-                <span className={`text-xs ${isLight ? 'text-emerald-700' : 'text-emerald-300'}`}>
-                  Triagem MQL/SQL • Atendimento no WhatsApp • Chamada de Vídeo ao Vivo no Pátio • Frete de Retorno Otimizado • Contrato & Pix
-                </span>
+          <div className="flex w-full flex-col items-center mt-3 relative z-10">
+            <div className={`${isLight ? 'bg-emerald-50 border-emerald-300 text-emerald-800' : 'bg-emerald-950/40 border-emerald-500/50 text-emerald-400'} border-2 px-10 py-5 rounded-2xl flex items-center gap-5 shadow-xl max-w-3xl w-full justify-center`}>
+              <ShieldCheck className="w-10 h-10 text-emerald-500 shrink-0" />
+              <div className="text-left flex-1">
+                <span className="text-lg font-black block text-emerald-400">Processo Comercial Consultivo, CRM & Fechamento Pix</span>
+                <p className={`text-xs ${isLight ? 'text-emerald-800 font-medium' : 'text-emerald-300'} mt-1`}>
+                  🎯 <strong>Projeção Base (Mês 2+):</strong> ~75 Leads/mês (CPL R$ 33) • 30 MQLs (40%) • 10 SQLs (35%) • ~1,3 Venda/mês • CAC de Mídia R$ 2.000
+                </p>
+                <p className={`text-[11px] ${isLight ? 'text-emerald-700' : 'text-emerald-400/80'} mt-1`}>
+                  Triagem no WhatsApp • Chamada de Vídeo ao Vivo no Pátio de Palmas • Frete de Retorno Otimizado • Fechamento em 3 a 5 dias
+                </p>
               </div>
             </div>
           </div>
@@ -793,7 +804,7 @@ function RenderBlock({ slide }: { slide: any }) {
                className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-base shadow-lg shadow-red-950/40 hover:shadow-red-600/30 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
              >
                <FileSpreadsheet className="w-5 h-5" />
-               <span>Acessar Cronograma de Entregas no Google Sheets</span>
+               <span>{d.texto_botao || "Acessar Cronograma de Entregas no Google Sheets"}</span>
                <ExternalLink className="w-4 h-4 opacity-80" />
              </a>
            )}

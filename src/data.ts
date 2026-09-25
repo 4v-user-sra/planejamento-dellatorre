@@ -41,13 +41,13 @@ export const presentationData = {
       "content_slots": {
         "titulo": "Sumário Executivo",
         "itens_agenda": [
-          "Diagnóstico de Ativos & Histórico Digital",
-          "Diferenciais Inegociáveis Dellatorre",
+          "Diagnóstico de Ativos & Presença Digital",
           "Benchmarking Competitivo de Mercado",
+          "Diferenciais Inegociáveis Dellatorre",
           "Identidade Visual & Posicionamento",
           "Personas & Segmentação de Demanda",
           "Objetivos SMART & OKRs de Performance",
-          "Estratégia de Aquisição (Google Ads + Meta)",
+          "Sugestão de Plano de Mídia & Projeções",
           "Drawflow do Funil de Conversão & CRM",
           "Workflow de Vídeos de Autoridade & Conteúdo",
           "Cronograma de Execução & Fases"
@@ -119,68 +119,6 @@ export const presentationData = {
             "titulo": "Padronização Visual das Capas",
             "texto": "A maioria das imagens não possuem essa identidade padrão da marca. Em um mar de anúncios genéricos na OLX, padronizar 100% das fotos de capa com a identidade visual da empresa ajuda na fixação da marca na mente do cliente que está buscando.",
             "tipo": "negativo"
-          }
-        ]
-      }
-    },
-    {
-      "id": "07_analise_meta",
-      "slide_type": "meta_ads_analysis",
-      "content_slots": {
-        "titulo": "Diagnóstico do Tráfego Pago Anterior vs. Nova Estratégia",
-        "investimento": "R$ 1.500/mês",
-        "cpa_medio": "Desqualificado",
-        "verba_perdida": "100%",
-        "venda_rastreada": {
-          "valor": "R$ 0,00",
-          "pedidos": 0,
-          "origem": "Experiências anteriores com 2 gestores de tráfego"
-        },
-        "venda_zero": {
-          "valor": "R$ 12.000,00",
-          "pedidos": 0,
-          "origem": "Campanhas genéricas no Meta Ads sem qualificação de público"
-        },
-        "historico_mensal": [
-          { "mes": "Gestor 1 - Mês 1", "pedidos": 0, "cpa": 0, "investimento": "R$ 1.500,00", "alerta": "Anúncio genérico no Facebook Ads" },
-          { "mes": "Gestor 1 - Mês 2", "pedidos": 0, "cpa": 0, "investimento": "R$ 1.500,00", "alerta": "Leads curiosos sem poder aquisitivo" },
-          { "mes": "Gestor 1 - Mês 3", "pedidos": 0, "cpa": 0, "investimento": "R$ 1.500,00", "alerta": "Cancelamento por falta de vendas" },
-          { "mes": "Gestor 2 - Mês 1", "pedidos": 0, "cpa": 0, "investimento": "R$ 1.500,00", "alerta": "Volume alto de contatos desqualificados" },
-          { "mes": "Gestor 2 - Mês 2", "pedidos": 0, "cpa": 0, "investimento": "R$ 1.500,00", "alerta": "Peões de obra e funcionários sem verba" },
-          { "mes": "Gestor 2 - Mês 3", "pedidos": 0, "cpa": 0, "investimento": "R$ 1.500,00", "alerta": "Falta de filtro e falta de CRM" },
-          { "mes": "Gestor 2 - Mês 4", "pedidos": 0, "cpa": 0, "investimento": "R$ 1.500,00", "alerta": "Cancelamento de tráfego anterior" },
-          { "mes": "Diagnóstico V4", "pedidos": 0, "cpa": 0, "investimento": "R$ 0,00", "alerta": "Reestruturação para Google Ads + CRM" }
-        ],
-        "cpa_referencia_historica": 0,
-        "funcionou": [
-          "Validação de demanda digital comprovada: o cliente de máquinas de alto valor compra pela internet quando há segurança e vídeo inspeção.",
-          "Estoque diversificado com produtos de alta liquidez: Pás Carregadeiras, Retroescavadeiras e Cavalinhos Mecânicos.",
-          "Atendimento direto ágil por Jean e Rodrigo com fechamento em 3 a 5 dias."
-        ],
-        "nao_funcionou": [
-          "Campanhas focadas unicamente em Meta Ads (Facebook/Instagram) sem filtro de renda, atraindo curiosos e trabalhadores sem capacidade de compra.",
-          "Ausência total no Google Ads (canal com intenção ativa de compra imediata onde estão os compradores corporativos).",
-          "Falta de um CRM e cadência comercial para qualificar leads (MQL/SQL) antes de desgastar a equipe de vendas."
-        ]
-      }
-    },
-    {
-      "id": "08_diferenciais",
-      "slide_type": "vertical_feature_list",
-      "content_slots": {
-        "titulo": "Diferenciais Inegociáveis Dellatorre",
-        "features": [
-          {
-            "titulo": "Estoque Físico de 2.550 m² no Polo de Concessionárias",
-            "descricao": "Sede própria na marginal da BR em Palmas, estrategicamente localizada no miolo das concessionárias (John Deere, Só Trac/Caterpillar, Case). Pátio amplo com 40 a 50 máquinas novas e seminovas selecionadas, proporcionando segurança física e vistoria imediata."
-          },
-          {
-            "titulo": "Atendimento Consultivo, Honestidade e Transparência Técnica",
-            "descricao": "Abordagem focada em diagnosticar a real necessidade operacional do cliente antes de ofertar o equipamento. Chamadas de vídeo em tempo real mostrando detalhes mecânicos, histórico e disponibilidade para mecânicos e motoristas realizarem testes no local."
-          },
-          {
-            "titulo": "Engenharia Logística com Frete de Retorno Otimizado",
-            "descricao": "Parcerias consolidadas com transportadoras para aproveitamento de viagens de retorno ('duas pernas' transformadas em uma), reduzindo os custos de frete em até 50% e viabilizando entregas competitivas em todo o Brasil (Mato Grosso, Pará, Nordeste e MS a 2.100 km)."
           }
         ]
       }
@@ -286,6 +224,27 @@ export const presentationData = {
       }
     },
     {
+      "id": "08_diferenciais",
+      "slide_type": "vertical_feature_list",
+      "content_slots": {
+        "titulo": "Diferenciais Inegociáveis Dellatorre",
+        "features": [
+          {
+            "titulo": "Estoque Físico de 2.550 m² no Polo de Concessionárias",
+            "descricao": "Sede própria na marginal da BR em Palmas, estrategicamente localizada no miolo das concessionárias (John Deere, Só Trac/Caterpillar, Case). Pátio amplo com 40 a 50 máquinas novas e seminovas selecionadas, proporcionando segurança física e vistoria imediata."
+          },
+          {
+            "titulo": "Atendimento Consultivo, Honestidade e Transparência Técnica",
+            "descricao": "Abordagem focada em diagnosticar a real necessidade operacional do cliente antes de ofertar o equipamento. Chamadas de vídeo em tempo real mostrando detalhes mecânicos, histórico e disponibilidade para mecânicos e motoristas realizarem testes no local."
+          },
+          {
+            "titulo": "Engenharia Logística com Frete de Retorno Otimizado",
+            "descricao": "Parcerias consolidadas com transportadoras para aproveitamento de viagens de retorno ('duas pernas' transformadas em uma), reduzindo os custos de frete em até 50% e viabilizando entregas competitivas em todo o Brasil (Mato Grosso, Pará, Nordeste e MS a 2.100 km)."
+          }
+        ]
+      }
+    },
+    {
       "id": "12_moodboard",
       "slide_type": "moodboard_identity",
       "content_slots": {
@@ -300,28 +259,28 @@ export const presentationData = {
       "slide_type": "persona_profile",
       "content_slots": {
         "numero_persona": "1",
-        "nome_persona": "O Produtor Rural do Agronegócio (Matopiba, MT e GO)",
-        "local": "Tocantins, Mato Grosso, Pará, Maranhão, Piauí, Bahia e Goiás",
+        "nome_persona": "O Produtor Rural do Agronegócio (TO, GO, DF, MT, MS, MA e PA)",
+        "local": "Tocantins, Goiás, Distrito Federal, Mato Grosso, Mato Grosso do Sul, Maranhão e Pará",
         "idade": "35 a 65 anos",
         "profissao": "Produtor de Grãos, Pecuarista e Gestor de Fazenda",
-        "renda": "Faturamento agrícola elevado (Ticket Médio R$ 200k - R$ 600k)",
+        "renda": "Faturamento agrícola elevado (Ticket Médio R$ 200k - R$ 500k+)",
         "genero": "Masculino predominante",
-        "dispositivo": "Smartphone Android / iOS (uso no campo e estrada)",
-        "canais": "Google Search, WhatsApp, Instagram e OLX",
+        "dispositivo": "Smartphone Android / iOS (pesquisa cedo no campo e estrada, 6h às 20h)",
+        "canais": "Google Search, WhatsApp e Instagram",
         "dores_bullets": [
-          "Prejuízos financeiros causados por máquinas quebradas no meio da safra ou preparo de solo.",
-          "Medo de cair em golpes virtuais com anúncios falsos em compras interestaduais sem verificação.",
-          "Custo abusivo de frete que inviabiliza trazer maquinário de outros estados distantes."
+          "Prejuízos financeiros imediatos por maquinário quebrado no meio do plantio, colheita ou preparo de solo.",
+          "Medo crônico de cair em golpes online na internet/OLX ao negociar máquinas pesadas com vendedores sem procedência.",
+          "Custo de frete interestadual exorbitante que encarece a compra de equipamentos fora da sua região."
         ],
         "desejos_bullets": [
-          "Pás carregadeiras e retroescavadeiras prontas para trabalho pesado imediato (abastecer calcário, abertura de valas, desmatamento legal e drenagem).",
-          "Negociação transparente com chamada de vídeo ao vivo mostrando a máquina em funcionamento no pátio.",
-          "Facilidade para colocar veículos ou caminhonetes como parte do pagamento na troca."
+          "Pás carregadeiras e retroescavadeiras prontas para entrega imediata e operação pesada no campo.",
+          "Segurança total na negociação com chamada de vídeo ao vivo no pátio físico de Palmas e laudo de funcionamento.",
+          "Logística viável com aproveitamento de frete de retorno que reduza os custos de transporte pela metade."
         ],
         "objecoes_bullets": [
-          "A máquina seminova vai aguentar a rotina pesada da fazenda sem dar dor de cabeça mecânica?",
-          "Posso confiar em transferir o valor via Pix antes do maquinário ser embarcado no caminhão prancha?",
-          "O valor do frete até o meu local não vai encarecer demais a negociação?"
+          "A máquina seminova realmente tem procedência e está pronta para trabalhar sem risco mecânico?",
+          "Posso confiar em transferir o valor via Pix para uma empresa em Palmas antes do embarque no caminhão prancha?",
+          "O valor do frete até o meu município não vai inviabilizar a oportunidade?"
         ]
       }
     },
@@ -330,28 +289,28 @@ export const presentationData = {
       "slide_type": "persona_profile",
       "content_slots": {
         "numero_persona": "2",
-        "nome_persona": "O Construtor Civil, Empreiteiro & Minerador",
-        "local": "Pará (Canaã dos Carajás, Marabá), MT (Sinop), TO e Nordeste",
+        "nome_persona": "O Construtor Civil, Empreiteiro & Terraplanagem",
+        "local": "Polos de obras e mineração em TO, PA, MT, MA, GO e DF",
         "idade": "32 a 60 anos",
-        "profissao": "Empresário de Construtora, Usineiro, Minerador e Locador de Equipamentos",
-        "renda": "Faturamento empresarial robusto (Ticket Médio R$ 250k - R$ 1M+)",
+        "profissao": "Empresário de Construção Civil, Terraplanagem, Mineração e Obras Públicas",
+        "renda": "Faturamento empresarial robusto (Ticket Médio R$ 200k - R$ 600k+)",
         "genero": "Masculino",
         "dispositivo": "Desktop e Smartphone no canteiro de obras",
-        "canais": "Google Search, Indicações de Mercado, WhatsApp e Portais Especializados",
+        "canais": "Google Search (alta intenção de busca), WhatsApp e Indicações",
         "dores_bullets": [
-          "Prazos contratuais apertados em obras e mineração que exigem equipamentos disponíveis com urgência imediata.",
-          "Preços exorbitantes e filas de espera de concessionárias para máquinas zero km.",
-          "Experiências prévias com equipamentos maquiados que apresentaram falhas hidráulicas ou estruturais logo após a compra."
+          "Prazos contratuais de obras e licitações apertados exigindo maquinário disponível com urgência imediata.",
+          "Preços abusivos e filas de espera de 6 meses de concessionárias para máquinas zero km.",
+          "Receio de adquirir equipamentos com problemas ocultos em bombas hidráulicas, motor ou material rodante."
         ],
         "desejos_bullets": [
-          "Disponibilidade imediata de escavadeiras hidráulicas, motoniveladoras (patrol), rolos compactadores e caminhões caçamba.",
-          "Garantia de procedência com laudo técnico e abertura para enviar mecânico próprio para vistoriar o pátio.",
-          "Parceria comercial sólida e ágil para expansão contínua de frota de maquinário."
+          "Disponibilidade a pronta-entrega de Pás Carregadeiras, Retroescavadeiras (Case 580N, Cat 416), Escavadeiras e Caminhões Caçamba.",
+          "Atendimento comercial técnico, ágil e direto no WhatsApp com negociação resolvida em 3 a 5 dias.",
+          "Transparência em vídeo e liberdade para enviar mecânico de confiança para vistoriar o pátio de 2.550 m²."
         ],
         "objecoes_bullets": [
-          "Qual o histórico de horas trabalhadas e estado das bombas hidráulicas e material rodante?",
-          "A empresa possui estrutura física real e CNPJ estabelecido para emitir nota e formalizar contrato?",
-          "Como funciona o suporte logístico caso precise de mais caminhões ou máquinas para a mesma obra?"
+          "Qual o histórico de horímetro e o estado real de bombas hidráulicas e material rodante?",
+          "A Dellatorre possui pátio físico próprio, CNPJ sólido e emissão de nota fiscal para formalizar contrato?",
+          "Como funciona o prazo e a garantia logística do embarque no caminhão prancha até a obra?"
         ]
       }
     },
@@ -359,52 +318,48 @@ export const presentationData = {
       "id": "17_objetivo_smart",
       "slide_type": "smart_goal_okr",
       "content_slots": {
-        "titulo": "Objetivos Estratégicos & Balizamento de Metas",
-        "fase_projeto": "Fase de Calibração, Reconhecimento & Validação de Indicadores (Out a Dez/2026)",
-        "objetivo_geral": "Até Dezembro de 2026, estabelecer a presença digital e autoridade da Dellatorre nos polos do agronegócio e construção (TO, GO, DF, MT, MS, MA e PA), validando os indicadores reais de marketing e vendas (CPL, taxa de conversão de curiosos para MQL/SQL, Custo por Oportunidade e CAC), com base na venda de ticket alto (R$ 200+)."
+        "titulo": "Objetivos Estratégicos & Balizamento das Metas",
+        "fase_projeto": "Fase de Calibração, Reconhecimento & Validação de Indicadores (90 Dias)",
+        "objetivo_geral": "Até Dezembro de 2026, estabelecer a presença digital e autoridade da Dellatorre nos polos do agronegócio e construção (TO, GO, DF, MT, MS, MA e PA), validando os indicadores reais de marketing e vendas com base na verba mensal aprovada."
       }
     },
     {
       "id": "13_estrategia",
-      "slide_type": "vertical_feature_list",
+      "slide_type": "spreadsheet_placeholder",
       "content_slots": {
-        "titulo": "Pilares Estratégicos de Aquisição & Conversão Consultiva",
-        "features": [
-          {
-            "titulo": "1. Reconhecimento de Marca & Construção de Confiança no Meta Ads (Fase 1 - R$ 1.000/mês)",
-            "descricao": "Como a venda é de altíssimo ticket (R$ 200k a R$ 500k+) e o mercado de seminovos/OLX sofre com desconfiança e risco de golpes, a estratégia inicial aloca R$ 1.000 em campanha de Reconhecimento e Autoridade de Marca no Meta Ads (Facebook/Instagram). O objetivo é apresentar a Dellatorre, mostrar o pátio físico em Palmas, estoque real e equipe técnica para produtores rurais e empreiteiros nos polos foco (TO, GO, DF, MT, MS, MA e PA), quebrando a barreira da desconfiança antes da oferta direta."
-          },
-          {
-            "titulo": "2. Google Ads Search de Alta Intenção + Landing Pages Ágeis por Categoria (Fase 1 - R$ 1.500/mês)",
-            "descricao": "Investimento de R$ 1.500 focado na Rede de Pesquisa do Google (Search) capturando termos de alta intenção comercial no momento exato em que o comprador busca adquirir o equipamento ('comprar pá carregadeira seminova', 'retroescavadeira à venda'). O tráfego direciona para Landing Pages dedicadas por categoria (Pás Carregadeiras, Retroescavadeiras e Tratores) com fotos reais, horímetro, laudo visual e botão de contato direto no WhatsApp com Rodrigo e Jean."
-          },
-          {
-            "titulo": "3. Atendimento Consultivo & Expansão para Remarketing (Fase 2 - Daqui a 30 Dias)",
-            "descricao": "O fechamento exige venda altamente consultiva: Rodrigo e Jean realizarão atendimento ativo via WhatsApp com chamadas de vídeo ao vivo no pátio para demonstração técnica das máquinas e cálculo do frete de retorno otimizado. Na próxima fase (daqui a 30 dias), após validação da qualificação e intenção de compra da Fase 1, será implementada a camada de Remarketing e Conversão no Meta Ads para reimpactar visitantes das páginas e acelerar o fechamento."
-          }
-        ]
+        "titulo": "Sugestão de Plano de Mídia Dellatorre",
+        "tipo_planilha": "Plano de Mídia & Projeções",
+        "imagem_url": "https://i.imgur.com/eY6IcL9.png",
+        "link_planilha": "https://claude.ai/artifact/YTcuTvsMcErniYVswSMANS",
+        "texto_botao": "Acessar Plano de Mídia Completo"
       }
     },
     {
       "id": "13_estrategia_campanhas",
       "slide_type": "campaign_strategy_boxes",
       "content_slots": {
-        "titulo": "Proposta de Alocação de Verba de Mídia (R$ 2.500/mês - Fase 1)",
+        "titulo": "Proposta de Alocação de Verba",
         "boxes": [
           {
             "percentual": "60%",
-            "nome": "Google Ads Search (Intenção Direta)",
-            "detalhes": "R$ 1.500/mês (Fase 1). Campanhas na Rede de Pesquisa focadas em palavras-chave de alta intenção comercial e fundo de funil ('comprar pá carregadeira seminova', 'retroescavadeira à venda') direcionando para Landing Pages de produto em TO, GO, DF, MT, MS, MA e PA."
+            "valor": "R$ 1.500 /mês (Mês 1 e 2+)",
+            "nome": "Google Ads Search",
+            "destaque_cor": "text-red-500",
+            "detalhes": "Motor primário de intenção comercial estruturado em duas campanhas consolidadas: Pás Carregadeiras (R$ 800/mês) e Retroescavadeiras + outras linhas e termos de marca (R$ 700/mês). Foco em capturar compradores que já pesquisam ativamente termos específicos nos 7 estados-alvo (TO, GO, DF, MT, MS, MA e PA), com rigorosa negativação de palavras-chave desde o primeiro dia e direcionamento direto para Landing Pages por categoria com botão de contato no WhatsApp de Jean e Rodrigo."
           },
           {
-            "percentual": "40%",
-            "nome": "Meta Ads (Reconhecimento & Autoridade)",
-            "detalhes": "R$ 1.000/mês (Fase 1). Campanha de reconhecimento e autoridade no Facebook e Instagram com vídeos institucionais, apresentação dos fundadores e máquinas no pátio físico de Palmas, quebrando a barreira da desconfiança e transmitindo solidez no Agro."
+            "percentual": "40% ➔ 24%",
+            "valor": "Mês 1: R$ 1.000 | Mês 2+: R$ 600",
+            "nome": "Meta Reconhecimento de Marca",
+            "destaque_cor": "text-white",
+            "detalhes": "Construção de autoridade e quebra da desconfiança no mercado agro e da construção. Campanha otimizada por Alcance (frequência de 2 impressões a cada 7 dias para público de 30 a 65 anos) exibindo vídeos reais gravados no pátio de 2.550 m² em Palmas, testes de funcionamento de bombas hidráulicas e giro, embarque em caminhão prancha e prova de procedência com os fundadores, gerando a base de retenção de 50% de vídeo para a próxima etapa."
           },
           {
-            "percentual": "Fase 2",
-            "nome": "Remarketing & Conversão WhatsApp",
-            "detalhes": "Implementação planejada para a próxima fase (daqui a 30 dias), após análise da qualificação e do volume de intenção de compra da Fase 1, reimpactando visitantes das Landing Pages e perfis para conversão direta no WhatsApp."
+            "percentual": "16%",
+            "valor": "Mês 2+: R$ 400 /mês",
+            "nome": "Meta Remarketing WhatsApp",
+            "destaque_cor": "text-white",
+            "detalhes": "Ativação a partir do segundo mês (Fase 2) para reimpactar exclusivamente a audiência qualificada: visitantes das Landing Pages nos últimos 30 dias, usuários que assistiram a pelo menos 50% dos vídeos no Meta e perfis engajados no Instagram nos últimos 60 dias. Utilização de mensagem inicial com filtro por modelo de máquina e estado para triagem prévia, conectando compradores quentes diretamente ao atendimento comercial."
           }
         ]
       }
@@ -414,7 +369,7 @@ export const presentationData = {
       "slide_type": "visual_drawflow",
       "content_slots": {
         "titulo": "Drawflow do Funil de Intenção & Conversão Consultiva",
-        "subtitulo": "Fluxos integrados: Google Search direto para LP + WhatsApp e Meta Ads para Instagram com autoridade, convergindo no atendimento comercial",
+        "subtitulo": "Arquitetura integrada: Google Search (Intenção Direta), Meta Ads (Reconhecimento & Prova Social) e Meta Remarketing (Mês 2+) convergindo no Processo Comercial",
         "orcamento_total": "R$ 2.500 / mês"
       }
     },
