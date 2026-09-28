@@ -345,14 +345,41 @@ function RenderBlock({ slide }: { slide: any }) {
 
   if (type === 'smart_goal_okr') {
     return (
-      <div className={`p-10 md:p-16 rounded-3xl border border-red-900/50 bg-gradient-to-br from-zinc-950 via-zinc-900 to-red-950/20 shadow-2xl`}>
-        <div className="text-center max-w-5xl mx-auto">
+      <div className={`p-8 md:p-14 rounded-3xl border border-red-900/50 bg-gradient-to-br from-zinc-950 via-zinc-900 to-red-950/20 shadow-2xl max-w-6xl mx-auto w-full`}>
+        <div className="text-center max-w-5xl mx-auto mb-10">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">{d.titulo}</h2>
-          <div className="text-lg md:text-2xl text-zinc-200 leading-relaxed font-sans bg-black/60 p-8 md:p-12 rounded-3xl border border-red-900/40 shadow-inner">
-            <span className="text-xs uppercase tracking-widest text-red-500 font-bold block mb-4">🎯 Direcionamento & Meta Geral</span>
+          <div className="text-base md:text-xl text-zinc-200 leading-relaxed font-sans bg-black/60 p-6 md:p-8 rounded-3xl border border-red-900/40 shadow-inner">
+            <span className="text-xs uppercase tracking-widest text-red-500 font-bold block mb-3">🎯 Direcionamento Estratégico & Meta Geral</span>
             {d.objetivo_geral}
           </div>
         </div>
+
+        {/* 3 Key Results (KRs) */}
+        {d.key_results && (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full text-left">
+            {d.key_results.map((kr: any, i: number) => (
+              <div 
+                key={i} 
+                className="bg-black/50 border border-zinc-800/80 hover:border-red-500/50 rounded-2xl p-6 flex flex-col justify-between shadow-lg transition-all duration-300 hover:-translate-y-1"
+              >
+                <div>
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="w-2 h-2 rounded-full bg-red-500" />
+                    <span className="text-[11px] font-bold text-red-400 uppercase tracking-wider font-mono">
+                      {kr.tag}
+                    </span>
+                  </div>
+                  <h4 className="text-lg md:text-xl font-bold text-white mb-2 leading-snug">
+                    {kr.titulo}
+                  </h4>
+                  <p className="text-xs md:text-sm text-zinc-400 leading-relaxed">
+                    {kr.descricao}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     )
   }

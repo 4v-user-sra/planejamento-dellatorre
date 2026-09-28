@@ -320,7 +320,24 @@ export const presentationData = {
       "content_slots": {
         "titulo": "Objetivos Estratégicos & Balizamento das Metas",
         "fase_projeto": "Fase de Calibração, Reconhecimento & Validação de Indicadores (90 Dias)",
-        "objetivo_geral": "Até Dezembro de 2026, estabelecer a presença digital e autoridade da Dellatorre nos polos do agronegócio e construção (TO, GO, DF, MT, MS, MA e PA), validando os indicadores reais de marketing e vendas com base na verba mensal aprovada."
+        "objetivo_geral": "Até Dezembro de 2026, estabelecer a presença digital e autoridade da Dellatorre nos polos do agronegócio e construção (TO, GO, DF, MT, MS, MA e PA), validando os indicadores reais de marketing e vendas com base na verba mensal aprovada.",
+        "key_results": [
+          {
+            "tag": "KR 1 • Inteligência & Métricas",
+            "titulo": "Mapear 100% dos indicadores do digital",
+            "descricao": "Mensurar e validar todas as métricas do funil (CPL, taxa de conversão MQL/SQL, Custo por Oportunidade e CAC real) para direcionar as decisões estratégicas."
+          },
+          {
+            "tag": "KR 2 • Gestão Comercial & CRM",
+            "titulo": "Acompanhar 100% dos leads de campanhas",
+            "descricao": "Garantir o registro, triagem e atendimento consultivo no WhatsApp e CRM para todos os contatos originados das campanhas de Google Search e Meta Ads."
+          },
+          {
+            "tag": "KR 3 • Alocação & Mídia",
+            "titulo": "Investir 100% da verba aprovada em mídia",
+            "descricao": "Executar com disciplina o orçamento mensal aprovado, distribuindo a verba com precisão entre Google Search (intenção direta) e Meta Ads (reconhecimento e remarketing)."
+          }
+        ]
       }
     },
     {
