@@ -49,8 +49,9 @@ export const presentationData = {
           "Objetivos SMART & OKRs de Performance",
           "Sugestão de Plano de Mídia & Projeções",
           "Drawflow do Funil de Conversão & CRM",
-          "Workflow de Vídeos de Autoridade & Conteúdo",
-          "Cronograma de Execução & Fases"
+          "Planilha de Acompanhamento — CRM & Gestão de Funil",
+          "Cronograma de Execução & Fases",
+          "Workflow de Vídeos de Autoridade & Conteúdo"
         ]
       }
     },
@@ -388,6 +389,18 @@ export const presentationData = {
         "titulo": "Drawflow do Funil de Intenção & Conversão Consultiva",
         "subtitulo": "Arquitetura integrada: Google Search (Intenção Direta), Meta Ads (Reconhecimento & Prova Social) e Meta Remarketing (Mês 2+) convergindo no Processo Comercial",
         "orcamento_total": "R$ 2.500 / mês"
+      }
+    },
+    {
+      "id": "18b_planilha_crm",
+      "slide_type": "spreadsheet_placeholder",
+      "content_slots": {
+        "titulo": "Planilha de Acompanhamento — CRM & Gestão de Funil Comercial",
+        "descricao": "O preenchimento diário e rigoroso da planilha de CRM é um pilar indispensável para o sucesso das vendas de alto ticket. É fundamental documentar e acompanhar cada lead em tempo real por todas as etapas da jornada comercial: envio inicial de mensagem, tentativas de contato, cadência de follow-up, qualificação de interesse (MQL/SQL), demonstração técnica em vídeo-chamada no pátio de Palmas, cálculo da proposta com frete de retorno e negociação final até a formalização de contrato e pagamento via Pix.",
+        "tipo_planilha": "Planilha de CRM & Gestão de Leads",
+        "imagem_url": "https://i.imgur.com/7ilWDth.png",
+        "link_planilha": "https://docs.google.com/spreadsheets/d/159Zxogo7VG9nUZpQuqvj-JIdYYs6DOOCCyUFdFySf4Q/edit?gid=172194612#gid=172194612",
+        "texto_botao": "Acessar Planilha de Acompanhamento (CRM)"
       }
     },
     {

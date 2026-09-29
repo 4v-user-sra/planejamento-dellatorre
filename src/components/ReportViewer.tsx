@@ -797,9 +797,16 @@ function RenderBlock({ slide }: { slide: any }) {
   if (type === 'spreadsheet_placeholder') {
     return (
       <div className="flex flex-col items-center max-w-6xl mx-auto w-full">
-         <div className="flex items-center gap-4 mb-8 self-start">
-           <FileSpreadsheet className="w-10 h-10 text-red-600 shrink-0" />
-           <h2 className={`text-4xl font-bold ${titleColor}`}>{d.titulo}</h2>
+         <div className="flex flex-col gap-3 mb-8 self-start w-full">
+           <div className="flex items-center gap-4">
+             <FileSpreadsheet className="w-10 h-10 text-red-600 shrink-0" />
+             <h2 className={`text-3xl md:text-4xl font-bold ${titleColor}`}>{d.titulo}</h2>
+           </div>
+           {d.descricao && (
+             <p className={`text-sm md:text-base ${subtitleColor} leading-relaxed max-w-5xl mt-1`}>
+               {d.descricao}
+             </p>
+           )}
          </div>
          
          <div className={`w-full rounded-2xl border-2 ${isLight ? 'border-zinc-200 bg-white shadow-xl' : 'border-zinc-800 bg-zinc-900 shadow-2xl'} p-4 md:p-6 flex flex-col items-center gap-6`}>
